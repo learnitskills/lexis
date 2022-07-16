@@ -4,7 +4,7 @@ resource "aws_s3_bucket" "mybucket" {
 
 resource "aws_s3_bucket_acl" "bucketacl" {
   bucket = var.bucket_name
-  acl    = var.acl
+  acl    = "public-read"
 }
 
 resource "aws_s3_bucket_website_configuration" "webhosting" {

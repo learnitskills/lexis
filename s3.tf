@@ -24,7 +24,7 @@ resource "aws_s3_object" "index" {
   key          = "index.html" # name of object
   source       = "index.html" # path of index file
   content_type = "text/html"
-  etag         = md5(file("index.html")) #  check if file is changed
+  etag         = md5(file("index.html")) #  encode the file
   acl          = "public-read"
 }
 
